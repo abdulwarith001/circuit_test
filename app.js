@@ -2,6 +2,9 @@ const express = require('express');
 const app = express();
 
 // Simulate a normal response (200 OK)
+app.get('/', (req, res) => {
+  res.status(200).json({ message: 'Server started'});
+});
 app.get('/success', (req, res) => {
   res.status(200).json({ message: 'Success', status: 200 });
 });
